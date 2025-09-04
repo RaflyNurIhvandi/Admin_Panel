@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+@theme {
+  --color-primary-1: #AA60C8;
+  --color-primary-2: #D69ADE;
+  --color-primary-3: #FFFFFF;
+  --color-primary-4: #EABDE6;
+  --color-slow-grey: oklch(44.6% 0.03 256.802);
+  --color-box1: #C0C9EE;
+  --color-box2: #C562AF;
+  --color-box3: #F6DC43;
+}

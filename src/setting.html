@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting | Admin Panel</title>
+    <link rel="stylesheet" href="./public/css/output.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css">
+</head>
+<body class="min-h-[100vh]">
+
+    <!-- sidebar -->
+    <nav class="not-sm:w-[73px] sm:w-[73px] md:w-[73px] lg:w-[250px] fixed top-0 left-0 h-[100%] bg-primary-2 px-[10px] py-[14px] border-r border-primary-4 transition-all duration-500">
+        <div class="flex items-center">
+            <div class="min-w-[45px] flex justify-center">
+                <img class="w-10 object-cover rounded-[50%]" src="./public/assets/logo.png" alt="">
+            </div>
+            <span class="logo-name not-sm:opacity-0 sm:opacity-0 md:opacity-0 lg:opacity-100 ml-6 text-[22px] font-semibold text-primary-3 transition duration-300 ease-in-out">AdminPanel</span>
+        </div>
+
+        <div class="mt-10 h-[calc(100%-90px)] flex flex-col justify-between">
+            <ul>
+                <li class="list-none">
+                    <a href="./index.html" class="flex items-center h-[50px] no-underline group relative hover:before:content-[''] hover:before:absolute hover:before:-l-[-7px] hover:before:w-[5px] hover:before:h-[5px] hover:before:rounded-[50%] hover:before:bg-primary-4">
+                        <i class="uil uil-estate text-2xl min-w-[45px] flex items-center justify-center text-primary-3 group-hover:text-primary-4 transition duration-300 ease-in-out"></i>
+                        <span class="menu-side lg:pointer-events-auto not-sm:opacity-0 sm:opacity-0 md:opacity-0 lg:opacity-100 text-lg font-normal text-primary-3 group-hover:text-primary-4 transition duration-300 ease-in-out">Dashboard</span>
+                    </a>
+                </li>
+                <li class="list-none">
+                    <a href="./users.html" class="flex items-center h-[50px] no-underline group relative hover:before:content-[''] hover:before:absolute hover:before:-l-[-7px] hover:before:w-[5px] hover:before:h-[5px] hover:before:rounded-[50%] hover:before:bg-primary-4">
+                        <i class="uil uil-users-alt text-2xl min-w-[45px] flex items-center justify-center text-primary-3 group-hover:text-primary-4 transition duration-300 ease-in-out"></i>
+                        <span class="menu-side lg:pointer-events-auto not-sm:opacity-0 sm:opacity-0 md:opacity-0 lg:opacity-100 text-lg font-normal text-primary-3 group-hover:text-primary-4 transition duration-300 ease-in-out">Users</span>
+                    </a>
+                </li>
+                <li class="list-none">
+                    <a href="./services.html" class="flex items-center h-[50px] no-underline group relative hover:before:content-[''] hover:before:absolute hover:before:-l-[-7px] hover:before:w-[5px] hover:before:h-[5px] hover:before:rounded-[50%] hover:before:bg-primary-4">
+                        <i class="uil uil-wrench text-2xl min-w-[45px] flex items-center justify-center text-primary-3 group-hover:text-primary-4 transition duration-300 ease-in-out"></i>
+                        <span class="menu-side lg:pointer-events-auto not-sm:opacity-0 sm:opacity-0 md:opacity-0 lg:opacity-100 text-lg font-normal text-primary-3 group-hover:text-primary-4 transition duration-300 ease-in-out">Services</span>
+                    </a>
+                </li>
+                <li class="list-none">
+                    <a href="./billing.html" class="flex items-center h-[50px] no-underline group relative hover:before:content-[''] hover:before:absolute hover:before:-l-[-7px] hover:before:w-[5px] hover:before:h-[5px] hover:before:rounded-[50%] hover:before:bg-primary-4">
+                        <i class="uil uil-usd-square text-2xl min-w-[45px] flex items-center justify-center text-primary-3 group-hover:text-primary-4 transition duration-300 ease-in-out"></i>
+                        <span class="menu-side lg:pointer-events-auto not-sm:opacity-0 sm:opacity-0 md:opacity-0 lg:opacity-100 text-lg font-normal text-primary-3 group-hover:text-primary-4 transition duration-300 ease-in-out">Billing</span>
+                    </a>
+                </li>
+                <li class="list-none">
+                    <a href="./setting.html" class="flex items-center h-[50px] no-underline group relative hover:before:content-[''] hover:before:absolute hover:before:-l-[-7px] hover:before:w-[5px] hover:before:h-[5px] hover:before:rounded-[50%] hover:before:bg-primary-4">
+                        <i class="uil uil-setting text-2xl min-w-[45px] flex items-center justify-center text-primary-3 group-hover:text-primary-4 transition duration-300 ease-in-out"></i>
+                        <span class="menu-side lg:pointer-events-auto not-sm:opacity-0 sm:opacity-0 md:opacity-0 lg:opacity-100 text-lg font-normal text-primary-3 group-hover:text-primary-4 transition duration-300 ease-in-out">Setting</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- end sidebar -->
+
+    <div class="box-dashboard relative not-sm:left-[73px] sm:left-[73px] md:left-[73px] lg:left-[250px] bg-primary-3 h-[100vh] not-sm:w-[calc(100%-73px)] sm:w-[calc(100%-73px)] md:w-[calc(100%-73px)] lg:w-[calc(100%-250px)] px-[10px] py-[14px] transition-all duration-500">
+
+        <!-- topbar -->
+        <div class="box-nav z-10 fixed top-0 not-sm:left-[73px] sm:left-[73px] md:left-[73px] lg:left-[250px] flex not-sm:w-[calc(100%-73px)] sm:w-[calc(100%-73px)] md:w-[calc(100%-73px)] lg:w-[calc(100%-250px)] justify-between px-[10px] py-[14px] bg-primary-1 items-center transition-all duration-500">
+            <i id="hamburger" class="uil uil-bars text-[26px] text-primary-3 cursor-pointer hover:text-primary-4 transition duration-300"></i>
+            <div class="relative not-sm:h-8 h-[45px] max-w-[600px] w-[100%] mx-[30px] my-0 group group-focus-within">
+                <i class="uil uil-search absolute not-sm:left-3 left-[15px] not-sm:text-sm text-[22px] z-10 top-[50%] -translate-y-1/2 text-primary-4 group-focus-within:text-primary-3"></i>
+                <input type="text" placeholder="Search..." class="absolute border border-primary-4 bg-primary-1 py-0 pr-[25px] not-sm:pl-9 pl-[50px] rounded-md h-[100%] w-[100%] text-primary-4 not-sm:text-[14px] text-[15px] font-normal outline-0 group-focus-within:text-primary-3 group-focus-within:border-[3px] group-focus-within:border-primary-3">
+            </div>
+            <img src="./public/assets/foto_profile.png" alt="" id="profile" class="w-10 rounded-[50%] cursor-pointer hover:shadow-lg transition duration-200">
+        </div>
+        <!-- end topbar -->
+
+        <div class="pt-[50px]">
+
+            <!-- content -->
+            <div>
+                <div class="flex items-center my-[30px] mx-0">
+                    <i class="uil uil-setting relative h-[35px] w-[35px] bg-primary-2 rounded-md text-primary-3 flex items-center justify-center text-2xl"></i>
+                    <span class="text-2xl font-medium text-slow-gray ml-2.5">Setting</span>
+                </div>
+            </div>
+            <!-- end content -->
+
+            <div class="my-4">&nbsp;</div>
+        </div>
+    </div>
+
+    <!-- pop up profile & logout -->
+    <div id="logout" class="hidden fixed right-4 top-14 w-60 rounded-md bg-primary-3 shadow-lg ring-1 ring-primary-2 py-1 z-50">
+        <div class="flex px-4 py-3 border-b-2 border-primary-2">
+            <img src="./public/assets/foto_profile.png" alt="" class="w-10 rounded-[50%]">
+            <div class="ml-2">
+                <span class="block text-sm text-primary-1">Rafly Nur Ihvandi</span>
+                <span class="block text-xs text-primary-1">raflynur001@gmail.com</span>
+            </div>
+        </div>
+        <form action="#" method="POST" class="mt-[3px]">
+            <button type="submit" class="block w-full px-4 py-2 text-left text-sm text-primary-1 hover:bg-primary-2 hover:text-primary-3 transition duration-300">
+                <i class="uil uil-signout"></i>
+                Log out
+            </button>
+        </form>
+    </div>
+    <!-- end -->
+
+    <!-- footer -->
+    <footer class="fixed bottom-0 left-0 w-full bg-primary-4 text-slow-grey text-center py-1.5 text-sm border-t border-primary-4">
+        <span>&copy; 2025 AdminPanel. All rights reserved.</span>
+    </footer>
+    <!-- end footer -->
+
+    <script src="./public/js/script.js"></script>
+</body>
+</html>
