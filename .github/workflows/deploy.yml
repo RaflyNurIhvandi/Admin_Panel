@@ -7,7 +7,6 @@ on:
 
 permissions:
   contents: write
-  deployments: write
   pages: write
   id-token: write
 
@@ -17,42 +16,41 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
 
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+        run: npm install
 
-      - name: Build project
-        run: npm run build
+      - name: Build TailwindCSS
+        run: npx tailwindcss -i ./src/public/css/input.css -o ./src/public/css/output.css --minify
 
-      - name: Upload production-ready build files
+      - name: Upload build files
         uses: actions/upload-artifact@v3
         with:
-          name: production-files
+          name: tailwind-build
           path: ./src
 
   deploy:
-    name: Deploy
+    name: Deploy to GitHub Pages
     needs: build
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
 
     steps:
-      - name: Download artifact
+      - name: Download build artifact
         uses: actions/download-artifact@v3
         with:
-          name: production-files
+          name: tailwind-build
           path: ./src
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./src
-
